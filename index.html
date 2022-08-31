@@ -4,9 +4,239 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/514ff62e5d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Emmanuel's Portfolio</title>
   </head>
+
   <body>
-    <script src="script.js"></script>
-  </body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-logo">Emmanuel</div>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-tab="0">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-tab="1">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-tab="2">Service</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">contact</a>
+          </li>
+        </ul>
+        <button class="nav-btn">Get quote</button>
+      </nav>
+
+      <div class="header__img--con"></div>
+
+      <div class="text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary__main"> Hello This Is Emmanuel </span>
+          <span class="heading-primary__sub">___ Web developer </span>
+        </h1>
+      </div>
+      <div class="media-contact">
+        <div class="media-contact__icon">
+          <i class="fa fa-linkedin-square"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section-service">
+        <div class="section-service__head">
+          <div class="service-head__vertical--line"></div>
+          
+          <h2 class="service-heading">
+            <span class="service-heading__sub"> service provided</span>
+            <span class="service-heading__main">
+              Create Your responsive & user-friendly website with us
+            </span>
+          </h2>
+
+        </div>
+        <div class="services">
+          <div class="divi1"></div>
+
+          <div class=" service service service service--1">
+            <div class="service-logo service-logo__1"></div>
+             <h3 class="service-head service-head__1">Web design</h3> 
+             <div class='service-writeup service-writeup__1'>I create unique and modern eye-catching UI UX for website & WebApp </div>
+          </div>
+
+          <div class="divi"></div>
+
+          <div class=" service service service service--2">
+            <div class="service-logo service-logo__2"></div>
+             <h3 class="service-head service-head__2">Website development</h3> 
+             <div class='service-writeup service-writeup__2'>Build responsive website for your business or company and make it stand-out </div>
+          </div>
+
+          <div class="divi"></div>
+
+          <div class=" service service service service--3">
+            <div class="service-logo service-logo__3"></div>
+             <h3 class="service-head service-head__3">WebApp development</h3> 
+             <div class='service-writeup service-writeup__3'></div>
+          </div>
+
+          <div class="divi1"></div>
+
+        </div>
+      </section>
+    </main>
+        <!-- <section class="sections">
+          <div class="overlay"></div>
+
+          <header class="head">
+            
+              <div class="media-contact">
+                <div class="media-contact-icon">
+                  <i class="fa fa-linkedin-square"></i>
+                  <i class="fa-brands fa-github"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+                <!-- contact 
+                <span class="topbar-contact">
+                  <span class="topbar-contacts">ighoemma481@gmail.com</span>
+                  <span class="topbar-contacts"
+                    ><i class="fa-solid fa-phone"></i>+234-903-285-2225</span
+                  >
+                </span>
+              </div>
+
+              <!--Logo-
+              <nav class="nav-bar">
+                <div class="logo">EmmyBest</div>
+
+                <!-- links --
+                <ul class="nav-links">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-tab="0">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-tab="1">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-tab="2">Service</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Project</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">contact</a>
+                  </li>
+                </ul>
+
+                <!--enqueries--
+                <div class="enqueries">
+                  <button class="quote-btn">Get a Quote</button>
+                </div>
+              </nav>
+            </div>
+          </header>
+
+          <div class="home">
+            <div class="home__greeting">
+              Hi,<span class="home__greeting--time"></span>
+            </div>
+
+            <h1 class="home-quote">
+              Create Your responsive and user-friendly <br />
+              website with us🙂
+            </h1>
+          </div>
+        </section>
+
+        <div class="about-con">
+          <div class="about">
+            <h2 class="about-label">About</h2>
+            <p class="about-qoute">
+              Hi, I'm Emmanuel, a Website developer with 2 year of experience, I'm a
+              self taught programmer who have crack the internet to get the
+              knowledge and skill I have always desire. I put my passion in anything
+              thing I'm involve so when I looked back I can be proud of myself.
+              Disappointment don't breaks me down but gives me reasons to look
+              beyond my standard
+            </p>
+            <button>Our Service</button>
+          </div>
+          <div class="about-pic">
+            <img src="./Title_adobe_express.png" alt="Profile picture" />
+          </div>
+        </div>
+
+        <div class="service-con">
+          <div class="service-images">
+            <img
+              class="service-image"
+              src="317755_badge_html_html5_achievement_award_icon.png"
+              alt="html logo"
+            />
+            <img
+              class="service-image"
+              src="308436_css_front-end_long shadow_web_web technology_icon.png"
+              alt="css logo"
+            />
+            <img
+              class="service-image"
+              src="652581_code_command_develop_javascript_language_icon.png"
+              alt="javascript logo"
+            />
+            <img
+              class="service-image"
+              src="308442_front-end_javascript_jquery_js_library_icon.png"
+              alt="jquery logo"
+            />
+            <img
+              class="service-image"
+              src="1174949_js_react js_logo_react_react native_icon.png"
+              alt="react js logo"
+            />
+            <img
+              class="service-image"
+              src="1012818_code_development_logo_nodejs_icon.png"
+              alt="nodejs logo"
+            />
+            <img
+              class="service-image"
+              src="294649_wordpress_icon.png"
+              alt="worldpress logo"
+            />
+          </div>
+          <div class="services">
+            <h2 class="service-label">Services</h2>
+            <p class="service-quote">
+              It doesn't matter if you are looking for website design or web app
+              development services. Our web development services are robust. In
+              addition, through our custom web developer services, We have build
+              secure web applications. Need some other services that are related to
+              web design or web app development As a professional web development
+              and design company, we can help you with them.
+            </p>
+          </div>
+        </div>
+
+        <script src="script.js"></script>
+      </body>
+    </html> -->
 </html>

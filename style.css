@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Voces&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&family=Voces&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  color: #f5fff9;
+}
+
+.header {
+  background-image: linear-gradient(to top left, #a651e9, #4d39d3);
+  height: 100rem;
+  width: 100%;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%);
+}
+
+.nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1;
+  width: 100%;
+  height: 7rem;
+  padding: 0 2rem;
+}
+
+.nav-logo {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  width: 40rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #f5fff9;
+  padding: 5px;
+  border-radius: 1rem;
+}
+
+.nav-link:hover {
+  border: 1px solid #a341ee;
+}
+
+.nav-btn {
+  font-size: 1.5rem;
+  height: 4.5rem;
+  width: 12rem;
+  border: none;
+  padding: 1rem;
+  color: #f5fff9;
+  cursor: pointer;
+  background-color: #d465ef;
+  translate: all 1s;
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 1px 5px 1rem rgba(0, 0, 0, 0.6);
+}
+
+.header__img--con {
+  position: relative;
+  top: 14%;
+  height: 90rem;
+  width: 80rem;
+  background-image: linear-gradient(to top left, #a751e94a, #4d39d35d),
+    url(./Title_adobe_express_22.png);
+  background-position: center;
+  clip-path: circle(53% at 40% 55%);
+}
+
+.text-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.heading-primary__main {
+  display: block;
+  font-size: 9rem;
+  font-weight: 600;
+  width: 110rem;
+  word-spacing: -10px;
+  animation: moveleft 1s ease-out;
+}
+
+.heading-primary__sub {
+  display: block;
+  font-size: 3rem;
+  text-align: center;
+  animation: movedown 1s ease-out;
+}
+
+.media-contact {
+  position: absolute;
+  top: 35%;
+  right: 6%;
+}
+
+.media-contact__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15rem;
+}
+
+i {
+  height: 4rem;
+  width: 4rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid #a341ee;
+  text-align: center;
+}
+
+i:hover {
+  background-image: linear-gradient(#4d39d3, #a651e9);
+}
+
+.main {
+  position: relative;
+}
+
+/* The Main Body */
+.section-service {
+  position: relative;
+  height: 87rem;
+  width: 100%;
+  margin-top: -5%;
+  color: #001d38;
+
+  /* background-color: yellow; */
+}
+
+.section-service__head {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  /* background-color: green; */
+}
+
+.service-head__vertical--line {
+  position: relative;
+  top: 0;
+  left: 50%;
+  height: 7rem;
+  width: 1rem;
+
+  margin-bottom: 1rem;
+  border-left: 1px solid #4d39d3;
+}
+
+.service-heading__sub {
+  display: block;
+  font-weight: 100;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+.service-heading__main {
+  font-size: 5rem;
+  display: block;
+}
+
+.services {
+  position: absolute;
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+  bottom: 12%;
+  /* padding: 0 6rem; */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.877),
+      rgba(255, 255, 255, 0.623)
+    ),
+    url(./PngItem_6164272.png);
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center; */
+}
+
+.divi1 {
+  height: 30rem;
+  width: 5rem;
+
+  background-color: #fff;
+}
+.divi {
+  height: 30rem;
+  width: 3rem;
+  background-color: #fff;
+}
+
+.service {
+  height: 30rem;
+  width: 33rem;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 3rem;
+  border: 1px solid #4d39d35e;
+  /* background-color: ; */
+}
+
+.service:hover {
+  background-color: #001d38d0;
+  color: #f5fff9;
+}
+
+.service-head {
+}
