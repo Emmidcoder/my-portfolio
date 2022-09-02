@@ -1,15 +1,15 @@
-"use strict";
-const greeting = document.querySelector(".home__greeting--time");
-const slides = document.querySelectorAll(".slide");
-const links = document.querySelectorAll(".nav-link");
-const linksCon = document.querySelector(".nav-links");
-const backButton = document.querySelector(".back-btn");
+'use strict';
+const greeting = document.querySelector('.home__greeting--time');
+const slides = document.querySelectorAll('.slide');
+const links = document.querySelectorAll('.nav-link');
+const linksCon = document.querySelector('.nav-links');
+const backButton = document.querySelector('.back-btn');
 
 // links.forEach((link) => (link.style.borderBottom = "none"));
 
 // The greeting//
 const time = new Date().getHours();
-const greetingTime = [" Good morning", " Good Afternoon", " Good Evening"];
+const greetingTime = [' Good morning', ' Good Afternoon', ' Good Evening'];
 
 if (time < 12) greeting.innerHTML = greetingTime[0];
 if (time >= 12) greeting.innerHTML = greetingTime[1];
@@ -48,20 +48,20 @@ const prevSlide = function () {
 
 const active = function (tab) {
   links.forEach(function (link) {
-    link.classList.add("nav-link__select");
-    link.classList.remove("nav-link__hidden-border");
+    link.classList.add('nav-link__select');
+    link.classList.remove('nav-link__hidden-border');
   });
 
   document
     .querySelector(`.nav-link[data-tab='${tab}']`)
-    .classList.add("nav-link__hidden-border");
+    .classList.add('nav-link__hidden-border');
   document
     .querySelector(`.nav-link[data-tab='${tab}']`)
-    .classList.remove("nav-link__select");
+    .classList.remove('nav-link__select');
 };
 
-linksCon.addEventListener("click", function (e) {
-  if (e.target.classList.contains("nav-link")) {
+linksCon.addEventListener('click', function (e) {
+  if (e.target.classList.contains('nav-link')) {
     const { tab } = e.target.dataset;
 
     goToSlide(tab);
@@ -69,7 +69,7 @@ linksCon.addEventListener("click", function (e) {
   }
 });
 
-backButton.addEventListener("click", function (e) {
+backButton.addEventListener('click', function (e) {
   active(0);
   goToSlide(0);
 });
