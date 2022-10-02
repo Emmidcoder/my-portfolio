@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////
+//////////////////////////////////////////////////
+/// The Header Section
+@media only screen and (max-width: 1200px) {
+    .header {
+        &__heading-primary {
+            &__main {
+                font-size: 7rem;
+            }
+
+            &__sub {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__medias {
+            right: 5%;
+        }
+    }
+}

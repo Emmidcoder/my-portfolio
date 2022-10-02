@@ -1,0 +1,121 @@
+.footer {
+    position: relative;
+    background-color: #0e131a;
+    grid-column: 1 / -1;
+    padding: 8rem 0;
+    text-align: center;
+    overflow: hidden;
+
+    &__container {
+        max-width: 80vw;
+        margin: 0 auto;
+        border-bottom: 1px solid gray;
+    }
+
+    &__conclusion {
+        max-width: 70rem;
+        margin: 0 auto;
+        margin-bottom: 10rem;
+
+        &--main {
+            display: block;
+            font-size: 5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+
+        }
+
+        &--sub {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        align-items: center;
+        grid-row-gap: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    &__nav {
+        list-style: none;
+        display: flex;
+        justify-content: start;
+        gap: 2rem;
+
+        &--link:link,
+        :visited {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__medias {
+        justify-self: end;
+        display: flex;
+        gap: 1rem;
+
+        &--icon:link,
+        :visited {
+            color: rgb(129, 126, 126);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 1.3rem;
+            font-size: 1.3rem;
+            box-shadow: 2px -2px 2px #334155a1, -5px 5px 2px rgba(0, 0, 0, 0.438);
+
+            &:hover {
+                box-shadow: $hover-btn-shadow;
+            }
+
+            &:active {
+                box-shadow: $active-btn-shadow;
+            }
+
+            @include btn-flash;
+        }
+    }
+
+    &__form {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-gap: 2rem;
+        justify-items: start;
+        background-color: #080e1b3d;
+        text-align: start;
+        margin-bottom: 5rem;
+
+        width: 50rem;
+        max-width: 80%;
+        border-radius: 5px;
+        padding: 2rem;
+        padding-bottom: 5rem;
+
+        &--label {
+            grid-column: 1 / -1;
+            font-size: 3rem;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.3rem;
+    }
+
+    &__contact:link,
+    :visited {
+        color: rgb(129, 126, 126);
+    }
+}

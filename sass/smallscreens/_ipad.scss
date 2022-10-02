@@ -1,0 +1,51 @@
+@media only screen and (max-width: 600px) {
+
+    // /////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+    // The Header section
+    .header {
+        &__circle {
+            display: none;
+        }
+
+        &__heading-primary {
+            &__main {
+                font-size: 4rem;
+                word-spacing: 2px;
+            }
+
+            &__sub {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Abort Section
+    .about {
+        padding: 8rem 3rem;
+
+        &__logo {
+            display: none;
+        }
+
+        &__detail {
+            margin-top: 0;
+        }
+    }
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Abort Section
+    .footer {
+
+        &__links {
+            justify-items: center;
+        }
+
+        &__medias {
+            justify-self: unset;
+        }
+    }
+}

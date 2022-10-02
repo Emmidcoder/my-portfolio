@@ -1,0 +1,280 @@
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+// The Navigation Section
+@media only screen and (max-width: 900px) {
+    .navigation {
+
+        &__checkbox {
+            display: none;
+        }
+
+        &__button {
+            display: block;
+            z-index: 1000;
+            float: right;
+            height: 5rem;
+            width: 5rem;
+
+            position: fixed;
+            top: 2rem;
+            right: 3rem;
+            background-color: $color-secondary;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: -3px 3px 1px rgba(0, 0, 0, 0.685), 2px -2px 1px #596f8d9c;
+            animation: heartbeat 1.5s ease-in-out 3 both;
+
+
+            &--icon {
+                position: relative;
+                margin-top: 2.4rem;
+
+                &,
+                &::before,
+                &::after {
+                    z-index: 1000;
+                    display: inline-block;
+                    width: 2.5rem;
+                    height: 2px;
+                    transition: all .1s;
+
+                    background-color: #fff;
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                }
+
+                &::before {
+                    top: -.75rem;
+                }
+
+                &::after {
+                    top: .75rem;
+                }
+            }
+
+            &:hover &--icon {
+                &::before {
+                    top: -.9rem;
+                }
+
+                &::after {
+                    top: .9rem;
+                }
+            }
+        }
+
+        &__checkbox:checked+&__button &__button--icon {
+            background-color: transparent;
+
+            &::before {
+                top: 0;
+                transform: rotate(-135deg);
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(135deg);
+            }
+        }
+
+        &__background {
+            display: block;
+            z-index: 350;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            position: fixed;
+            top: 2.5rem;
+            right: 3.5rem;
+            background-image: radial-gradient(#3d444d, #2b3441, #1a222d, #0f151d, #040608, #020b17, #00050b);
+            transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+
+        &__con {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 400;
+            height: 100vh;
+            visibility: hidden;
+            opacity: 0;
+            width: 0;
+            transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        &__nav {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &__links {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        &__item {
+            list-style: none;
+            font-size: 2rem;
+
+        }
+
+        &__link:link,
+        :visited {
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            overflow: hidden;
+            width: 100%;
+            padding: .6rem 2.5rem;
+            // background-color: yellow;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            box-shadow: $btn-shadow-nav;
+
+            @include btn-flash;
+
+            &:hover::before {
+                left: 110%;
+            }
+
+            &:hover {
+                box-shadow: $hover-btn-shadow;
+            }
+
+            &:active {
+                box-shadow: $active-btn-shadow;
+
+            }
+        }
+
+        &__logo-con {
+            // display: none;
+            z-index: 50;
+            position: absolute;
+            top: 3%;
+            justify-self: start;
+            width: 8rem;
+            height: 8rem;
+            margin-left: 1rem;
+        }
+
+        &__logo {
+            width: 100%;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__nav--btn {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            font-size: 2rem;
+            width: 100%;
+            padding: 1rem 4rem;
+
+            border: none;
+            border-radius: 5px;
+            color: #f5fff9;
+            cursor: pointer;
+            background-color: $color-secondary;
+            font-family: inherit;
+            box-shadow: $btn-shadow-nav;
+
+            animation: heartbeat 1.5s ease-in-out infinite both;
+
+
+            &:hover {
+                box-shadow: $hover-btn-shadow;
+            }
+
+            &:active {
+                box-shadow: $active-btn-shadow;
+            }
+
+            @include btn-flash;
+        }
+
+        // Navigation background
+        &__checkbox:checked~&__background {
+            transform: scale(50);
+        }
+
+        // Navigation Items
+        &__checkbox:checked~&__con {
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+        }
+    }
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Header Section
+    .header {
+        width: 100%;
+        height: 111vh;
+
+        &__img {
+            position: absolute;
+            width: 40rem;
+            height: 40rem;
+            bottom: 7%;
+        }
+
+        &__text-box {
+            bottom: 28%;
+        }
+
+        &__heading-primary {
+            &__main {
+                font-size: 5.5rem;
+                word-spacing: 2px;
+            }
+
+            &__sub {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__medias {
+            z-index: 50;
+            display: flex;
+            flex-direction: row;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &--icon:link,
+            :visited {
+                background-color: $color-secondary;
+                box-shadow: 1px -1px 1px #334155a1, -3px 3px 2px rgba(0, 0, 0, 0.438);
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Service Section
+    .service-heading {
+        &__vertical--line {
+            height: 6rem;
+        }
+
+        &__sub {
+            font-size: 3.5rem;
+        }
+    }
+}

@@ -1,81 +1,187 @@
-'use strict';
-const greeting = document.querySelector('.home__greeting--time');
-const slides = document.querySelectorAll('.slide');
-const links = document.querySelectorAll('.nav-link');
-const linksCon = document.querySelector('.nav-links');
-const backButton = document.querySelector('.back-btn');
+'use strict'
 
-// links.forEach((link) => (link.style.borderBottom = "none"));
+const navLinks = document.querySelectorAll('.navigation__link');
+const checkbox = document.querySelector('.navigation__checkbox');
 
-// The greeting//
-const time = new Date().getHours();
-const greetingTime = [' Good morning', ' Good Afternoon', ' Good Evening'];
+const ctaBtn = document.querySelector('.navigation__btn');
+const ctaNavBtn = document.querySelector('.navigation__nav--btn');
+const popup = document.querySelector('.popup');
+const overlay = document.querySelector('.overlay');
+const xmark = document.querySelector('.xmark');
+const navbar = document.querySelector('.navigation');
+const header = document.querySelector('.header');
 
-if (time < 12) greeting.innerHTML = greetingTime[0];
-if (time >= 12) greeting.innerHTML = greetingTime[1];
-if (time >= 16) greeting.innerHTML = greetingTime[2];
 
-let curSlide = 0;
-const maxSlide = slides.length;
+const forms = document.querySelectorAll('.form');
+const formBtns = document.querySelectorAll('.form__btn');
 
-//The slide features//
+
+////////////////////////////////////////
+///////////////////////////////////////
+// Remove navigation backgound on small screen
+navLinks.forEach(navLink => navLink.addEventListener('click', function () {
+    if (checkbox.checked) checkbox.checked = false
+}))
+
+ctaNavBtn.addEventListener('click', function () {
+    if (checkbox.checked) checkbox.checked = false
+})
+
+// Show and Remove Get-Quote function
+const toggleCTA = function (btn) {
+
+    btn.addEventListener('click', function () {
+        popup.classList.toggle('hidden')
+        overlay.classList.toggle('hidden')
+    });
+}
+toggleCTA(ctaBtn)
+toggleCTA(ctaNavBtn)
+toggleCTA(overlay)
+toggleCTA(xmark)
+
+
+//The sticky Navigation
+const navHeight = navbar.getBoundingClientRect().height
+
+const stickyNavBar = function (entries) {
+    const [entry] = entries
+
+    if (!entry.isIntersecting) navbar.classList.add('navigation--sticky')
+    else navbar.classList.remove('navigation--sticky')
+}
+
+new IntersectionObserver(stickyNavBar,
+    {
+        root: null,
+        threshold: 0.2,
+        rootMargin: `-${navHeight}px`
+    }).observe(header)
+
+const myCont = document.querySelector("#form");
+
+///////////////////////////////////////
+//////////////////////////////////////
+//Scrollslide up Sections Function
+const allSections = document.querySelectorAll('.section');
+const slidesUp = document.querySelectorAll('.slide-up');
+
+
+const scrollSlide = function (name, num) {
+    const revealSection = function (entries, observer) {
+        const [entry] = entries;
+
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section__hidden');
+
+        observer.unobserve(entry.target)
+    }
+
+    const sectionObserver = new IntersectionObserver(revealSection, {
+        root: null,
+        threshold: num,
+    })
+
+
+    name.forEach(section => {
+        sectionObserver.observe(section);
+        section.classList.add('section__hidden');
+    })
+
+}
+scrollSlide(allSections, 0.05)
+scrollSlide(slidesUp, 0.1)
+
+
+///////////////////////////////////////
+//////////////////////////////////////
+//Testimonies slide
+const slides = document.querySelectorAll('.testimony__slide')
+const btnLeft = document.querySelector('.testimony__btn--left')
+const btnRight = document.querySelector('.testimony__btn--right')
+const dotsContainer = document.querySelector('.testimony__dots')
+
+
+let curslide = 0
+const maxslide = slides.length - 1;
+
+const createDots = function () {
+    slides.forEach((_, ind) => dotsContainer.insertAdjacentHTML(
+        'beforeend', `<button class="testimony__dots__dot" data-slide="${ind}"></button>`)
+    )
+}
+createDots()
+
+const acticeDots = function (slide) {
+    document
+        .querySelectorAll('.testimony__dots__dot')
+        .forEach(dot => dot.classList.remove('testimony__dots__dot--active'));
+
+    document
+        .querySelector(`.testimony__dots__dot[data-slide="${slide}"]`)
+        .classList.add('testimony__dots__dot--active');
+}
+acticeDots(0)
+
 const goToSlide = function (slide) {
-  slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-  );
-};
-
-goToSlide(0);
+    slides.forEach((sl, ind) =>
+        sl.style.transform = `translateX(${100 * (ind - slide)}%)`
+    )
+}
+goToSlide(0)
 
 const nextSlide = function () {
-  if (curSlide === maxSlide - 1) {
-    curSlide = 0;
-  } else {
-    curSlide++;
-  }
+    if (curslide === maxslide) {
+        curslide = 0
+    } else {
+        curslide++
+    }
+    goToSlide(curslide)
+    acticeDots(curslide)
 
-  goToSlide(curSlide);
-};
+}
 
 const prevSlide = function () {
-  if (curSlide === 0) {
-    curSlide = maxSlide - 1;
-  } else {
-    curSlide--;
-  }
-  goToSlide(curSlide);
-};
+    if (curslide === 0) {
+        curslide = maxslide
+    } else {
+        curslide--
+    }
+    goToSlide(curslide)
+    acticeDots(curslide)
 
-const active = function (tab) {
-  links.forEach(function (link) {
-    link.classList.add('nav-link__select');
-    link.classList.remove('nav-link__hidden-border');
-  });
+}
 
-  document
-    .querySelector(`.nav-link[data-tab='${tab}']`)
-    .classList.add('nav-link__hidden-border');
-  document
-    .querySelector(`.nav-link[data-tab='${tab}']`)
-    .classList.remove('nav-link__select');
-};
+btnRight.addEventListener('click', nextSlide)
+btnLeft.addEventListener('click', prevSlide)
 
-linksCon.addEventListener('click', function (e) {
-  if (e.target.classList.contains('nav-link')) {
-    const { tab } = e.target.dataset;
+dotsContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains("testimony__dots__dot")) {
+        const { slide } = e.target.dataset;
+        goToSlide(slide)
+        acticeDots(slide)
+    }
+})
 
-    goToSlide(tab);
-    active(tab);
-  }
-});
 
-backButton.addEventListener('click', function (e) {
-  active(0);
-  goToSlide(0);
-});
+///////////////////////////////////////
+//////////////////////////////////////
+//Message Request
+forms.forEach(form => form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const dataArr = [...new FormData(this)];
+    const data = Object.fromEntries(dataArr);
 
-const init = function () {
-  active(0);
-  goToSlide(0);
-};
-init();
+    fetch("https://emmybest.com/emailhandler/index.php", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+
+        body: JSON.stringify(data),
+    }).then(res => {
+        return res.json()
+    }).then(data => {
+        alert(`Thank for contacting me. You message was sent succefully. ${data.name}`)
+    });
+}))

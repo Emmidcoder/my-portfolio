@@ -1,196 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/514ff62e5d.js"
-      crossorigin="anonymous"
-    ></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="shortcut icon" type="image/png" href="img/My-picture.png">
+
+    <script src="https://kit.fontawesome.com/514ff62e5d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css?ver=1.001" />
+    <script defer src="script.js?ver=1.001"></script>
     <title>Emmanuel's Portfolio</title>
-  </head>
+</head>
 
-  <body>
-    <header class="header" id="section-home">
-      <nav class="nav">
-        <div class="nav-logo">Emmanuel</div>
-        <ul class="nav-links">
-          <li class="nav-item">
-            <a class="nav-link" href="#section-home" >Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section-about" >About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section-services" >Service</a>
-          </li>
+<body class="container">
 
-          <li class="nav-item">
-            <a class="nav-link" href="#section-portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section-contact">contact</a>
-          </li>
-        </ul>
-        <button class="nav-btn">Get quote</button>
-      </nav>
+    <nav class="navigation ">
+        <input type="checkbox" class=" navigation__checkbox" id="checkbox">
+        <label for="checkbox" class=" navigation__button">
+            <span class=" navigation__button--icon"></span>
+        </label>
 
-      <div class="design-div">
-        <div class="design__circle-div1"></div>
-        <div class="design__circle-div2"></div>
-      </div>
+        <div class="navigation__background">&nbsp;</div>
 
-      <div class="header__img--con"></div>
-
-      <div class="text-box">
-        <h1 class="heading-primary">
-          <span class="heading-primary__main"> Hello This Is Emmanuel </span>
-          <span class="heading-primary__sub">___ Web developer </span>
-        </h1>
-      </div>
-      <div class="media-contact">
-        <div class="media-contact__icons">
-          <i class="home-media--contact__icon fa fa-linkedin-square"></i>
-          <i class="home-media--contact__icon fa-brands fa-github"></i>
-          <i class="home-media--contact__icon fa-brands fa-twitter"></i>
+        <div class="navigation__logo-con">
+            <img src="img/logo-small.png" alt="E-logo" class="navigation__logo" />
         </div>
-      </div>
+
+        <div class="navigation__con">
+            <div class="navigation__nav">
+                <ul class="navigation__links">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-home">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-about">About</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-services">Service</a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-portfolio">Portfolio</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#section-contacts">contact</a>
+                    </li>
+                </ul>
+
+                <button class="navigation__nav--btn">Get Quote</button>
+            </div>
+        </div>
+        <button class="navigation__btn">Get Quote</button>
+
+    </nav>
+
+    <header class="header" id="section-home">
+        <div class="header__img">&nbsp;</div>
+        <div class=" header__circle header__circle--1">&nbsp;</div>
+        <div class=" header__circle header__circle--2">&nbsp;</div>
+        <div class=" header__circle header__circle--3">&nbsp;</div>
+
+        <div class="header__text-box">
+            <h1 class="header__heading-primary">
+                <span class="header__heading-primary__main">hello, this is emmanuel</span>
+                <span class="header__heading-primary__sub">___ web developer</span>
+            </h1>
+        </div>
+
+
+        <div class="header__medias">
+            <a href="https://www.linkedin.com/in/emmanuel-ighofose-b12328242/" class="header__medias--icon">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+            <a href="https://github.com/Emmidcoder/my-portfolio" class="header__medias--icon">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://twitter.com/ighoemma481" class="header__medias--icon">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+
     </header>
 
-    <main class="main">
-      <section class="section-service" id="section-services">
-        <div class="section-service__head">
-          <div class="service-head__vertical--line"></div>
-          
-          <h3 class="service-heading">
-            <span class="service-heading__sub"> service provided</span>
-            <span class="service-heading__main">
-              Create Your responsive & user-friendly website with me
+    <section class="section services-con " id="section-services">
+        <h3 class="service-heading">
+
+            <div class="service-heading__vertical--line"></div>
+
+            <span class="service-heading__main"> service provided</span>
+            <span class="service-heading__sub">
+                Create Your responsive & user-friendly website with me
             </span>
-          </h3>
-
-        </div>
-
-        <div class="services" >
-          <div class=" service service service service--1">
-            <div class="service-logo service-logo__1"></div>
-             <h3 class="service-head service-head__1">Web design</h3> 
-             <div class='service-writeup service-writeup__1'>I create unique and modern eye-catching UI UX for website & WebApp </div>
-          </div>
-
-          <div class=" service service service service--2">
-            <div class="service-logo service-logo__2"></div>
-             <h3 class="service-head service-head__2">Website development</h3> 
-             <div class='service-writeup service-writeup__2'>Build responsive website for your business or company and make it stand-out </div>
-          </div>
-
-          <div class=" service service service service--3">
-            <div class="service-logo service-logo__3"></div>
-             <h3 class="service-head service-head__3">WebApp development</h3> 
-             <div class='service-writeup service-writeup__3'>Develop your web application software for any platform</div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="section-portfolio" id="section-portfolio">
-        <h3 class="portfolio-head">
-          <span class="portfolio-head__main">portfolios</span>
-          <div class="portfolio-head__sub">Some of my awesome stuffs here</div>
         </h3>
 
-        <div class="portofolio-contents">
-          <div class="first2-image">
-            <img src="./img/project-1.jpg" alt="screenshot of project" class="portfolio-content__project portfolio-content__project-1">
-            <img src="./img/project-2.jpg" alt="screenshot of project" class="portfolio-content__project portfolio-content__project-2">
-          </div>
+        <div class="services slide-up">
 
-          <div class="second2-image">
-            <img src="./img/project-3.jpg" alt="screenshot of project" class="portfolio-content__project portfolio-content__project-3">
-            <img src="./img/project-4.jpg" alt="screenshot of project" class="portfolio-content__project portfolio-content__project-4">
-          </div>
+            <div class="service service__1">
+                <div class="service__logo service__logo--1">&nbsp;</div>
+                <h3 class="service__head service__head--1">Web design</h3>
+                <div class="service__details service__details__1">
+                    I create unique and modern eye-catching UI UX for website & WebApp
+                </div>
+            </div>
+
+            <div class="service service__2">
+                <div class="service__logo service__logo--2"></div>
+                <h3 class="service__head service__head--2">Website development</h3>
+                <div class="service__details service__details--2">
+                    Build responsive website for your business or company and make it
+                    stand-out
+                </div>
+            </div>
+
+            <div class="service service__3">
+                <div class="service-logo service-logo--3"></div>
+                <h3 class="service__head service__head--3">WebApp development</h3>
+                <div class="service__details service__details--3">
+                    Let me develop your web application software for any platform
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="section-about" id="section-about">
+    <section class="section portfolio" id="section-portfolio">
+        <h3 class="portfolio-head slide-up">
+            <span class="portfolio-head__main">portfolios</span>
+            <span class="portfolio-head__sub">Some of my awesome stuffs here</span>
+        </h3>
+
+        <div class="portfolio-contents slide-up">
+
+            <img src="img/project1.jpg" alt="project1" class="portfolio__content portfolio__content--1">
+
+            <img src="img/project2.jpg" alt="project2" class="portfolio__content portfolio__content--2">
+
+            <img src="img/project3.jpg" alt="project3" class="portfolio__content portfolio__content--3">
+
+            <img src="img/project4.jpg" alt="project4" class="portfolio__content portfolio__content--4">
+        </div>
+
+    </section>
+
+    <section class="section about" id="section-about">
         <div class="about__logo">About</div>
-        <div class="about"> 
-          <div class="about__details">
-            <h3 class="about__label">About me</h3>
-            <p>
-              Hi, I'm Emmanuel, a Website developer with 2 years of experience, I'm a
-              self taught programmer who have crack the internet to get the
-              knowledge and skill I have always desire. I put my passion in anything
-               I'm involve in so I can be proud of my result.
-              Disappointment doesn't breaks me down but gives me reasons to look
-              beyond my standard. 
-            </p>
-          </div>
 
-          <div class="pic--con">
-            <img src="./img/profile-pic.png" alt="profile picture" class="about__pic">
-          </div> 
+        <div class="about__detail slide-up">
+            <div class="about__text">
+                <h3 class="about__text--heading">About me</h3>
+                <p>
+                    Hi, I'm Emmanuel, a Website developer with 2 years of experience,
+                    I'm a self taught programmer who have crack the internet to get
+                    the knowledge and skill I have always desire. I put my passion in
+                    anything I'm involve in so I can be proud of my result.
+                    Disappointment doesn't breaks me down but gives me reasons to look
+                    beyond my standard.
+                </p>
+            </div>
+
+            <div class="about__pic">
+                <img src="img/My-picture.png" alt="profile picture" />
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="testimonies">
-        <div class="testimony-label">Testimonies</div>
-        <div class="testimony-details">
-          <div class="testimony testimony-1">testimony1</div>
-          <div class="testimony testimony-2">testimony2</div>
-          <div class="testimony testimony-3">testimony3</div>
+    <section class="section testimonies">
+        <div class="testimony slider">
+            <h3 class="testimony__label">Testimonies</h3>
+            <div class="testimony__slide">
+                <div class="testimony__quote">
+                    <p class="testimony__quote--text">Emmanuel was responsive to our requests and quickly
+                        answered,
+                        regardless
+                        of "local time." He was willing to accommodate all of our edits and suggestions, and also
+                        provided
+                        useful feedback that we hadn't thought of.
+                    </p>
+                    <p class="testimony__quote--name">Jasper Myles </p>
+                </div>
+            </div>
+
+            <div class="testimony__slide">
+                <div class="testimony__quote">
+                    <p class="testimony__quote--text"> He Has done a wonderful job on the first part of our
+                        project.
+                        He has
+                        high
+                        work standards and he keeps up with them. Looking forwards to continue to work with him
+                    </p>
+                    <p class="testimony__quote--name">Ana Mert</p>
+                </div>
+            </div>
+
+            <div class="testimony__slide">
+                <blockquote class="testimony__quote">
+                    <p class="testimony__quote--text"> Results are always on target. Very
+                        professional
+                        and gets
+                        the job
+                        done
+                        every time. When I have gaps in my schedule this is the first person I call on to fill them in.
+                        I
+                        know I
+                        can count on him to complete the job. I will continue requesting his services.
+                    </p>
+                    <p class="testimony__quote--name">Albie Theodore</p>
+                </blockquote>
+            </div>
         </div>
-      </section>
-    </main>
+        <div class="testimony__btn testimony__btn--left"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="testimony__btn testimony__btn--right"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="testimony__dots"></div>
+    </section>
 
-    <footer class="footer">
-      <div class="conclusion">
-        <span class="conclusion__main">Let's discuss for a project</span>
-        <span class="conclusion__sub">Need some other services that are related to
-          web design or web app development? As a professional web developer
-          and designer, I can help you with them.
-        </span>
+    <footer class="section footer">
+        <div class="footer__container slide-up">
+            <div class="footer__conclusion">
+                <span class="footer__conclusion--main">Let's discuss for a project</span>
+                <span class="footer__conclusion--sub">Do you need some other services that are related to web design or
+                    web
+                    app
+                    development? As a professional web developer and designer, I can help
+                    you with them.
+                </span>
+            </div>
 
-        <ul class="footer__nav-links">
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#section-about" >About</a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#section-services" >Service</a>
-          </li>
+            <div class="footer__contacts-section" id="section-contacts">
+                <form class="footer__form form slide-up" id="form">
 
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#section-portfolio">portfolio</a>
-          </li>
-        </ul>
+                    <label class="footer__form--label" for="name">contact me</label>
 
-        <div class=" footer__media-contact">
-          <div class="footer__media-contact__icons">
-            <i class="footer__media--contact__icon fa fa-linkedin-square"></i>
-            <i class="footer__media--contact__icon fa-brands fa-github"></i>
-            <i class="footer__media--contact__icon fa-brands fa-twitter"></i>
-          </div>
+                    <div class="form__contacts">
+                        <div>
+                            <input class="form__input form__input--contact" id="name" type="text" name="name"
+                                placeholder="Your name" required>
+                            <label for="name"> Your name</label>
+                        </div>
+
+                        <div>
+                            <input class="form__input form__input--contact" id="email" type="email" name="Email"
+                                placeholder=" Your email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                    </div>
+
+                    <div class="form__text">
+                        <textarea class="form__input form__input--text" name="user-message" id="user-message" cols="30"
+                            rows="8" placeholder="message"></textarea>
+                    </div>
+
+                    <button class="form__btn" type="submit">submit</button>
+                </form>
+            </div>
+
+            <div class="footer__links slide-up">
+                <ul class="footer__nav ">
+                    <li>
+                        <a class="footer__nav--link" href="#section-about">About</a>
+                    </li>
+
+                    <li>
+                        <a class="footer__nav--link" href="#section-services">Service</a>
+                    </li>
+
+                    <li>
+                        <a class="footer__nav--link" href="#section-portfolio">portfolio</a>
+                    </li>
+                </ul>
+
+                <div class="footer__medias">
+                    <a class="footer__medias--icon" href="https://www.linkedin.com/in/emmanuel-ighofose-b12328242/">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                    <a class="footer__medias--icon" href="https://github.com/Emmidcoder/my-portfolio">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a class="footer__medias--icon" href="https://twitter.com/ighoemma481">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="footer__contacts">
+                <a class="footer__contact footer__contact--email" href="mailto:ighoemma481@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    ighoemma481@gmail.com
+                </a>
+
+                <a class="footer__contact footer__contact--number" href="tel:+234-903-285-2225">
+                    <i class="fa-solid fa-phone"></i>
+                    +234-903-285-2225
+                </a>
+            </div>
         </div>
-        <div class="contacts">
-          <span class="email">
-            <i class="fa-solid fa-envelope"></i>
-            ighoemma481@gmail.com
-          </span>
-
-          <span class="contact-number">
-            <i class="fa-solid fa-phone"></i>
-            +234-903-285-2225
-          </span>
-        </div>
-      </div>  
     </footer>
-  </body>      
+
+    <div class="popup hidden">
+        <div class="overlay hidden"></div>
+        <form class="popup__form form">
+
+            <i class="xmark popup__form--xmark fa-solid fa-xmark"></i>
+
+            <div class="form__contacts">
+                <div>
+                    <input class="form__input form__input--contact" type="text" id="name" name="name"
+                        placeholder="Your name" required>
+                    <label for="name"> Full name</label>
+                </div>
+
+                <div>
+                    <input class="form__input form__input--contact" name="email" placeholder=" Your email">
+                    <label for="email">Email</label>
+                </div>
+
+                <div>
+                    <input class="form__input form__input--contact" type="tel" id="number" name="number"
+                        placeholder="Your phone number">
+                    <label for="number">Phone number</label>
+                </div>
+
+            </div>
+
+            <div class="form__text">
+                <textarea class="form__input form__input--text" name="user-message" id="user-message" cols="30"
+                    rows="10" placeholder="message"> </textarea>
+            </div>
+
+            <button class="form__btn">submit</button>
+        </form>
+    </div>
+
+</body>
+
 </html>

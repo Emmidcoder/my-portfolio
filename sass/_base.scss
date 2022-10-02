@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Voces&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600&family=Voces&display=swap');
+
+$color-secondary: #334155;
+$color-secondary-dark: #27272a;
+$color-secondary-dark-opacity: #27272ad5;
+$color-secondary-opacity: #3341559f;
+$gradient-primary: linear-gradient(to top right, #000000, #334155);
+$gradient-primary-opacity: linear-gradient(to top right, #000000be, #334155a1);
+
+$btn-shadow: -8px 8px 1px rgba(0, 0, 0, 0.541);
+$btn-shadow-nav: -8px 8px 2px rgba(0, 0, 0, 0.685), 3px -3px 1px #3341559c;
+$hover-btn-shadow: -6px 6px 1px rgba(0, 0, 0, 0.39);
+$active-btn-shadow: inset -5px 5px 10px rgba(0, 0, 0, 0.13), inset 5px -5px 5px rgba(0, 0, 0, 0.13);
+
+$container-shadow: 10px -10px 10px rgba(238, 235, 235, 0.815), -10px 10px 10px rgba(0, 0, 0, 0.438);
+$hover-container-shadow: inset -5px 5px 3px rgba(0, 0, 0, 0.438), inset 5px -5px 3px rgba(238, 235, 235, 0.815);
+
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    position: relative;
+    background-color: rgb(222, 222, 222);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: max-content repeat(9, 1fr);
+    grid-template-rows: min-content 1fr repeat(6, min-content);
+}
+
+
+.section {
+    transition: all .5s;
+}
+
+.slide-up {
+    transition: all .7s;
+}
+
+.section__hidden {
+    opacity: 0;
+    transform: translateY(15rem);
+}
+
+.dotbg {
+    background-color: red !important;
+}

@@ -1,0 +1,137 @@
+@media only screen and (max-width: 450px) {
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Header Section
+    .header {
+
+        &__circle {
+            display: none;
+        }
+
+        &__heading-primary {
+            &__main {
+                font-size: 3.5rem;
+                word-spacing: 1px;
+                width: auto;
+            }
+
+            &__sub {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__medias {
+
+            &--icon:link,
+            :visited {
+                font-size: 1rem;
+                padding: 1rem;
+
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Service Section
+    .service-heading {
+        // background-color: yellow;
+        margin-bottom: 6rem;
+
+
+        &__vertical--line {
+            height: 6rem;
+        }
+
+        &__sub {
+            font-size: 3rem;
+        }
+    }
+
+    .services-con {
+        padding-bottom: 5rem;
+    }
+
+    .service {
+        padding: 2rem;
+
+
+        &__head {
+            margin-bottom: 2rem;
+
+        }
+
+        &__details {
+            font-size: 1.5rem;
+        }
+    }
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The portfolio Section
+    .portfolio {
+        padding: 5rem 0;
+
+        &-head {
+            margin-bottom: 3rem;
+
+            &__main {
+                text-transform: uppercase;
+                display: block;
+                margin-bottom: 3rem;
+                font-size: 1.3rem;
+                font-weight: 300;
+                letter-spacing: 3px;
+            }
+
+            &__sub {
+                display: block;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Abort Section
+    .about {
+        padding: 5rem 3rem;
+    }
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Testimony Section
+    .testimony {
+        &__btn {
+            font-size: 2rem;
+
+            &--left {
+                left: 2%;
+            }
+
+            &--right {
+                right: -2%;
+            }
+        }
+    }
+
+
+    ///////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    /// The Abort Section
+    .footer {
+        padding: 5rem;
+
+        &__conclusion {
+
+            &--main {
+                font-size: 3rem;
+            }
+        }
+
+        &__contacts {
+            flex-direction: column;
+        }
+    }
+}

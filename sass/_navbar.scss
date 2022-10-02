@@ -1,0 +1,130 @@
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    // background-color: aqua;
+    position: absolute;
+    background-image: linear-gradient(to top left, #3341551e, #00000025);
+    grid-column: 1 / -1;
+    width: 100%;
+    z-index: 100;
+
+    &--sticky {
+        position: fixed;
+        background-color: #020d1dee;
+    }
+
+    &__button,
+    &__checkbox {
+        display: none;
+    }
+
+    &__background {
+        display: none;
+    }
+
+    &__con {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__logo-con {
+        // display: none;
+        justify-self: start;
+        width: 8rem;
+        height: 8rem;
+        margin-left: 3rem;
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 1rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &__item {
+        width: 100%;
+        position: relative;
+        font-size: 1.2rem;
+        list-style: none;
+    }
+
+    &__link:link,
+    :visited {
+        position: relative;
+        z-index: 100;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 2px;
+        padding: .5rem 0;
+        width: 10rem;
+        margin: 0 auto;
+        box-shadow: -10px 10px 3px rgba(0, 0, 0, 0.13);
+        overflow: hidden;
+
+
+
+        @include btn-flash;
+
+        &:hover::before {
+            left: 110%;
+        }
+
+        &:hover {
+            box-shadow: $hover-btn-shadow;
+        }
+
+        &:active {
+            box-shadow: $active-btn-shadow;
+
+        }
+    }
+
+    &__nav--btn {
+        display: none;
+    }
+
+    &__btn {
+        position: relative;
+        overflow: hidden;
+        justify-self: end;
+        margin-right: 3rem;
+        font-size: 1.5rem;
+        height: 4rem;
+        width: 12rem;
+        border-radius: 5px;
+        border: none;
+        padding: .7rem;
+        color: #f5fff9;
+        cursor: pointer;
+        background-color: $color-secondary;
+        font-family: inherit;
+        animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+        box-shadow: $btn-shadow;
+
+
+
+        &:hover {
+            box-shadow: $hover-btn-shadow;
+        }
+
+        &:active {
+            box-shadow: $active-btn-shadow;
+        }
+
+        @include btn-flash;
+
+    }
+
+}
